@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>LUMSOLDOM's Portfolio</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts (Asimovian) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body>
+    <!-- Background video -->
+    <!-- TEMP test: replace just the src to see if it renders -->
+    <video autoplay loop muted playsinline class="bg-video" preload="auto" poster="bg-fallback.jpg">
+    <source src="images/background.mp4" type="video/mp4">
+    </video>
+
+
+
+    <!-- Page content -->
+    <div class="content">
+      <!-- Profile video -->
+      <video autoplay loop muted playsinline width="200" class="profile-video">
+        <source src="images/profile.mp4" type="video/mp4">
+      </video>
+
+      <!-- Hero section heading -->
+      <h1>Coding Progress</h1>
+
+      <!-- Typing effect text -->
+      <p><span id="typing"></span></p>
+
+      <!-- Four main tiles linking to separate pages -->
+      <section class="tiles">
+        <a class="tile" href="projects.html">
+        <img src="images/projects.png" alt="Projects icon" class="tile-icon">
+         <h3>Projects</h3><span>See my builds</span>
+        </a>
+
+        <a class="tile" href="why-me.html">
+        <img src="images/whyme.png" alt="why me icon" class="tile-icon">
+          <h3>Why me</h3><span>What I bring</span>
+        </a>
+
+        <a class="tile" href="goal.html">
+        <img src="images/goal.png" alt="goal icon" class="tile-icon">
+          <h3>Goal</h3><span>Where I’m heading</span>
+        </a>
+
+        <a class="tile" href="learning.html">
+        <img src="images/learning.png" alt="learning icon" class="tile-icon">
+          <h3>What I’m learning atm</h3><span>Current focus</span>
+        </a>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
