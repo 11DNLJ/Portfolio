@@ -1,26 +1,25 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
     <title>LUMSOLDOM's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Global styles for the whole site (lives at repo root) -->
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- Google Fonts (Asimovian) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
   </head>
   <body>
     <!-- Background video -->
-    <!-- TEMP test: replace just the src to see if it renders -->
-    <video autoplay loop muted playsinline class="bg-video" preload="auto" poster="bg-fallback.jpg">
-    <source src="images/background.mp4" type="video/mp4">
+    <video autoplay loop muted playsinline class="bg-video" preload="auto" poster="images/bg-fallback.jpg">
+      <source src="images/background.mp4" type="video/mp4">
+      <!-- Fallback if video can't play -->
+      <img src="images/bg-fallback.jpg" alt="">
     </video>
-
-
 
     <!-- Page content -->
     <div class="content">
@@ -29,38 +28,39 @@
         <source src="images/profile.mp4" type="video/mp4">
       </video>
 
-      <!-- Hero section heading -->
+      <!-- Hero heading -->
       <h1>Coding Progress</h1>
 
-      <!-- Typing effect text -->
+      <!-- Typing effect target -->
       <p><span id="typing"></span></p>
 
-      <!-- Four main tiles linking to separate pages -->
+      <!-- Tiles -->
       <section class="tiles">
-        <a class="tile" href="projects.html">
-        <img src="images/projects.png" alt="Projects icon" class="tile-icon">
-         <h3>Projects</h3><span>See my builds</span>
+        <!-- NOTE: projects.html is inside /ProjectPage -->
+        <a class="tile" href="ProjectPage/projects.html">
+          <img src="images/projects.png" alt="Projects icon" class="tile-icon">
+          <h3>Projects</h3><span>See my builds</span>
         </a>
 
-        <a class="tile" href="why-me.html">
-        <img src="images/whyme.png" alt="why me icon" class="tile-icon">
+        <a class="tile" href="whyme/why-me.html">
+          <img src="images/whyme.png" alt="Why me icon" class="tile-icon">
           <h3>Why me</h3><span>What I bring</span>
         </a>
 
-        <a class="tile" href="goal.html">
-        <img src="images/goal.png" alt="goal icon" class="tile-icon">
+        <a class="tile" href="goal/goal.html">
+          <img src="images/goal.png" alt="Goal icon" class="tile-icon">
           <h3>Goal</h3><span>Where I’m heading</span>
         </a>
 
-        <a class="tile" href="learning.html">
-        <img src="images/learning.png" alt="learning icon" class="tile-icon">
-          <h3>What I’m learning atm</h3><span>Current focus</span>
+        <a class="tile" href="learning/learning.html">
+          <img src="images/learning.png" alt="Learning icon" class="tile-icon">
+          <h3>Learnings atm</h3><span>Current focus</span>
         </a>
       </section>
     </div>
 
-    <!-- Scripts -->
+    <!-- Scripts: load Typed.js first, then your script -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
