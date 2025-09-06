@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Projects — LUMSOLDOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+  <body>
+    <video autoplay loop muted playsinline class="bg-video" preload="auto" poster="../images/bg-fallback.jpg">
+      <source src="../images/background.mp4" type="video/mp4">
+      <img src="../images/bg-fallback.jpg" alt="">
+    </video>
+
+    <main class="projects-wrap content">
+      <header class="projects-hero">
+        <h2>My Projects</h2>
+        <p>A collection of projects showcasing my work progress!</p>
+      </header>
+
+      <section class="projects-stats" aria-label="Project statistics">
+        <div class="stat-card">
+          <div class="stat-number" id="stat-total">0</div>
+          <div class="stat-label">Total Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number stat-green" id="stat-completed">0</div>
+          <div class="stat-label">Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number stat-blue" id="stat-progress">0</div>
+          <div class="stat-label">In Progress</div>
+        </div>
+      </section>
+
+      <section class="projects-grid" aria-label="Projects">
+        <!-- Card 1 -->
+        <article class="project-card" data-status="completed">
+          <div class="card-media">
+            <img src="../images/projects/ecommerce.jpg" alt="Portfolio Website" />
+            <span class="badge badge-completed">Completed</span>
+          </div>
+          <div class="card-body">
+            <h3>Portfolio Website</h3>
+            <p class="card-desc">Portfolio website used as Portfolio.</p>
+            <ul class="tags">
+              <li>html</li><li>css</li><li>javascript</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-ghost" href="https://github.com/11DNLJ/Portfolio/blob/main/index.html" target="_blank" rel="noopener">
+                <span class="i i-code" aria-hidden="true"></span> Code
+              </a>
+              <a class="btn" href="https://11dnlj.github.io/Portfolio/" target="_blank" rel="noopener">
+                <span class="i i-play" aria-hidden="true"></span> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer class="projects-cta">
+        Interested in collaborating? <a href="mailto:neillum@icloud.com">Let’s build something amazing together.</a>
+      </footer>
+    </main>
+
+    <script defer src="projects.js"></script>
+  </body>
+</html>

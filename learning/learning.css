@@ -1,0 +1,80 @@
+/* =========================
+   Learning Page Styles
+   ========================= */
+
+   :root {
+    --muted-2: #b8c0cc;
+    --card-bg: rgba(255,255,255,.06);
+    --card-hover: rgba(255,255,255,.12);
+  }
+  
+  .learning-wrap { padding: 40px 0 80px; max-width: 1200px; margin: 0 auto; }
+  
+  /* Hero */
+  .hero { text-align: center; margin-bottom: 40px; }
+  .hero .lead { color: var(--muted-2); }
+  
+  /* Cards (glassmorphism) */
+  .card {
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    backdrop-filter: blur(8px) saturate(120%);
+    transition: transform .25s ease, background .25s ease;
+  }
+  .card:hover { transform: translateY(-6px); background: var(--card-hover); }
+  
+  /* Goals grid */
+  .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 28px;
+  }
+  .goal .goal-head {
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom: 10px;
+  }
+  .goal h3 { margin: 0; font-size: 1.1rem; }
+  .goal p { color: var(--muted-2); font-size: .95rem; }
+  
+  /* Progress bar */
+  .progress { display: flex; align-items: center; gap: 12px; margin: 14px 0; }
+  .bar {
+    flex:1; height: 10px;
+    background: rgba(255,255,255,.08);
+    border-radius: 999px; overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%; width: 0;
+    background: linear-gradient(90deg, #9b2226, #e0e1dd);
+    border-radius: 999px;
+    transition: width .35s ease;
+  }
+  .pct { min-width: 3ch; font-weight: 600; }
+  
+  /* Milestones */
+  .ml-title { font-weight: 600; margin: 8px 0; }
+  .milestones ul { margin: 0; padding-left: 18px; text-align: left; font-size: .9rem; color: var(--muted-2); }
+  
+  /* CTA slab */
+  .slab-wrap { margin: 60px 0 0; }
+  .slab { text-align: center; padding: 28px; }
+  .slab .chip {
+    display:inline-block; margin:6px; font-size:12px;
+    color:#e6e9ef; background:rgba(255,255,255,.06);
+    border:1px solid var(--card-border);
+    padding:6px 12px; border-radius:999px;
+    transition: background .2s;
+  }
+  .slab .chip:hover { background:rgba(255,255,255,.15); }
+  
+  /* Badge */
+  .badge {
+    font-size: .7rem; padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--card-border);
+  }
+  .badge.blue { background: rgba(56,189,248,.2); color: #e9eef5; }
+  

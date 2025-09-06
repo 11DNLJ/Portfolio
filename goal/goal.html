@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Coding Goals — LUMSOLDOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Global dark theme -->
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="goal.css" />
+  </head>
+  <body>
+    <!-- Background video -->
+    <video autoplay loop muted playsinline class="bg-video" preload="auto" poster="../images/bg-fallback.jpg">
+      <source src="../images/background.mp4" type="video/mp4">
+      <img src="../images/bg-fallback.jpg" alt="">
+    </video>
+
+    <main class="content goals-wrap">
+      <!-- HERO -->
+      <header class="goals-hero">
+        <span class="pill">Learning Journey</span>
+        <h1>My Coding Goals</h1>
+        <p>Simple goals to track my journey from complete beginner to junior developer.</p>
+      </header>
+
+      <!-- OVERALL PROGRESS (from Why Me page data) -->
+      <section class="overall card">
+        <div class="overall-row">
+          <h3>Overall Progress</h3>
+          <div class="overall-percent" id="overall-percent">0%</div>
+        </div>
+        <div class="bar"><div class="bar-fill" id="overall-bar"></div></div>
+        <p class="overall-sub">Ready to become a developer</p>
+      </section>
+
+      <!-- CTA -->
+      <section class="card bottom-cta">
+        <h3>One Step at a Time</h3>
+        <p>Every expert was once a beginner. I’m taking one goal at a time, building my skills and working toward my dream of becoming a developer.</p>
+        <a class="btn" href="../CodingProgress.html">← Back Home</a>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script defer src="goal.js"></script>
+  </body>
+</html>

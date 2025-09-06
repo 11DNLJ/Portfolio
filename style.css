@@ -1,0 +1,124 @@
+:root {
+  --bg: #000814;
+  --text: #e0e1dd;
+  --muted: #94a3b8;
+  --accent: #9b2226;
+  --card-border: rgba(255,255,255,.08);
+}
+
+/* ---- Tiny reset / base ---- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Asimovian', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin: 40px;
+  text-align: center;
+}
+img, video { max-width: 100%; height: auto; }
+
+/* ---- Layout container so content doesn't hug edges on phones ---- */
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;   /* sits above background video */
+  z-index: 1;
+  text-align: center;
+}
+
+/* ---- Heading / type ---- */
+h1 {
+  font-size: clamp(28px, 6vw, 56px);
+  line-height: 1.1;
+  color: #e0e1dd;
+}
+#typing {
+  font-size: clamp(14px, 2.6vw, 20px);
+  color: var(--accent);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ---- Profile video ---- */
+.profile-video {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 4px solid #e0e1dd;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  width: min(40vw, 220px);
+  height: auto;
+}
+
+/* ---- Tile grid ---- */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px,1fr));
+  gap: 16px;
+  max-width: 1280px;
+  margin: 40px auto;
+}
+.tile {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  align-content: end;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  background: rgba(255,255,255,0.03); /* simple subtle card bg */
+  transition: transform .25s, box-shadow .25s, border-color .25s, background .25s;
+}
+.tile h3 { margin: 0 0 6px; font-size: 1.6rem; }
+.tile span { letter-spacing: .12em; font-size: .78rem; color: var(--muted); }
+.tile:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 14px 32px rgba(0,0,0,.45);
+  border-color: var(--accent);
+}
+
+/* Tile icon above text */
+.tile-icon {
+  width: clamp(36px, 6vw, 64px);
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  filter: invert(1); /* makes dark icons light; remove if your PNGs are already light */
+}
+
+/* ---- Background video ---- */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;         /* sits behind everything */
+  opacity: 0.3;        /* dimmed so content is readable */
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 720px) {
+  .tiles { grid-template-columns: 1fr; }
+  .content { padding: 0 12px; }
+}
+
+
+/* ---- Accessibility: reduce motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .bg-video { display: none; }
+}
+
+/* big desktops (currently 4 columns) */
+@media (min-width: 1200px){
+  .tiles{
+    grid-template-columns: repeat(4, minmax(240px, 1fr)); /* was repeat(3, ...) */
+    gap: 20px; /* optional: a bit more breathing room */
+  }
+}
